@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Shelf App</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1>Book Shelf App</h1>
+    </header>
+
+    <main class="wrapper">
+      <section class="container bg-white shadow basis-75" id="add-book">
+        <h2 class="container-header text-center">Tambah Buku</h2>
+        <form class="form" action="#" id="form-add-book">
+          <div class="form-group">
+            <label for="title">Judul</label>
+            <input
+              type="text"
+              id="title"
+              name="title"
+              class="form-control"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="author">Penulis</label>
+            <input
+              type="text"
+              id="author"
+              name="author"
+              class="form-control"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <label for="year">Tahun</label>
+            <input
+              type="number"
+              id="year"
+              name="year"
+              class="form-control"
+              required
+            />
+          </div>
+          <div class="form-group flex-row align-center gap-1">
+            <input
+              type="checkbox"
+              name="isComplete"
+              id="isComplete"
+              class="check-complete-input"
+            />
+            <label for="isComplete" class="check-complete-label"
+              >Selesai dibaca</label
+            >
+          </div>
+          <input
+            type="submit"
+            value="Tambah"
+            name="Submit"
+            class="btn btn-submit"
+          />
+        </form>
+      </section>
+      <section class="container bg-white shadow basis-400px" id="search-book">
+        <h2 class="container-header text-center">Cari Buku</h2>
+        <form class="form" action="#" id="form-search-book">
+          <div class="form-group">
+            <label for="title">Judul</label>
+            <input
+              type="text"
+              id="search-title"
+              name="search-title"
+              class="form-control"
+              required
+            />
+          </div>
+          <div class="flex justify-end gap-1">
+            <input
+              type="reset"
+              value="Reset"
+              name="reset"
+              class="btn btn-reset"
+            />
+            <input
+              type="submit"
+              value="Cari"
+              name="cari"
+              class="btn btn-submit"
+            />
+          </div>
+        </form>
+      </section>
+
+      <section class="container bg-gray">
+        <h2 class="container-header">Belum selesai dibaca</h2>
+        <div class="list-item" id="books"></div>
+      </section>
+
+      <section class="container bg-gray">
+        <h2 class="container-header">Selesai dibaca</h2>
+        <div class="list-item" id="completed-books"></div>
+      </section>
+    </main>
+
+    <div class="alert-container" id="alert-container">
+      <!-- Akan di isi oleh javascript -->
+    </div>
+
+    <script src="js/init.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
