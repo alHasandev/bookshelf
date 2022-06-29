@@ -144,7 +144,9 @@ function makeBook(bookObject) {
   } else {
     const checkButton = getCheckButton(bookObject.id);
 
-    container.append(checkButton);
+    const trashButton = getTrashButton(bookObject.id);
+
+    container.append(checkButton, trashButton);
   }
 
   return container;
